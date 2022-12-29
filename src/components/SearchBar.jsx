@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Paper, IconButton } from '@mui/material';
-import Search from '@mui/icons-material/Search';
+import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,11 +32,11 @@ const SearchBar = () => {
       <input
         className='search-bar'
         placeholder='Search...'
-        value=""
+        value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='search'>
-        <Search/>
+        <SearchIcon />
       </IconButton>
     </Paper>
   );
